@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" concent="Temporizador estilo pomodoro" />
+		<title>FocusTimer 2.0 - Pomodoro</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+		<script type="module" src="./src/main.js" defer></script>
+		<link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="app">
+			<button id="toggle-mode">
+				<span class="sr-only">Ativar Dark mode!</span>
+				<i class="ph-bold ph-sun"></i>
+				<i class="ph-bold ph-moon"></i>
+			</button>
+
+			<div class="display flex">
+				<section class="timer">
+					<span id="minutes">25</span>
+					<span>:</span>
+					<span id="seconds">00</span>
+				</section>
+
+				<section id="controls" class="flex">
+					<button data-action="toggleRunning" class="ph ph-play-circle">
+						<span class="sr-only">aciona o timer</span>
+					</button>
+					<button data-action="toggleRunning" class="ph ph-pause-circle">
+						<span class="sr-only">pausar o timer</span>
+					</button>
+
+					<button data-action="set" class="ph ph-timer">
+						<span class="sr-only">ajustar contador</span>
+					</button>
+					<button data-action="reset" class="ph ph-stop-circle">
+						<span class="sr-only">Reiniciar contador</span>
+					</button>
+
+					<button data-action="add5min" class="ph ph-plus-circle">
+						<span class="sr-only">
+							aumenta em mais 5 minutos o tempo do timer
+						</span>
+					</button>
+
+					<button data-action="remove5min" class="ph ph-minus-circle">
+						<span class="sr-only"> diminui em 5 minutos o tempo do timer </span>
+					</button>
+				</section>
+			</div>
+
+			<div class="cards">
+				<button
+					data-song="bgAudioTree"
+					id="bgAudioTree"
+					class="ph ph-tree buttonbg"
+				>
+					<span class="sr-only"> som de floresta </span>
+				</button>
+
+				<button
+					data-song="bgAudioRain"
+					id="bgAudioRain"
+					class="ph ph-cloud-rain buttonbg"
+				>
+					<span class="sr-only"> som de chuva </span>
+				</button>
+
+				<button
+					data-song="bgAudioShop"
+					id="bgAudioShop"
+					class="ph ph-storefront buttonbg"
+				>
+					<span class="sr-only"> som de cafeteria </span>
+				</button>
+
+				<button
+					data-song="bgAudioFire"
+					id="bgAudioFire"
+					class="ph ph-fire buttonbg"
+				>
+					<span class="sr-only"> som de lareira </span>
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
